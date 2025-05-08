@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive JavaScript Playground</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>JavaScript Event Playground</h1>
+      <p>Explore different event handlers and interactive elements</p>
+    </header>
+
+    <main>
+      <!-- Event Handling Section -->
+      <section class="card">
+        <h2>Event Handling</h2>
+
+        <div class="event-box" id="click-box">
+          <h3>Click Me!</h3>
+          <p>Try clicking this box</p>
+        </div>
+
+        <div class="event-box" id="hover-box">
+          <h3>Hover Over Me</h3>
+          <p>Move your mouse here</p>
+        </div>
+
+        <div class="event-box" id="keypress-box">
+          <h3>Type Something</h3>
+          <p>Focus here and press any key</p>
+          <div class="key-display"></div>
+        </div>
+
+        <div class="event-box secret" id="secret-box">
+          <h3>Secret Area</h3>
+          <p>Double-click or long press me</p>
+        </div>
+      </section>
+
+      <!-- Interactive Elements Section -->
+      <section class="card">
+        <h2>Interactive Elements</h2>
+
+        <div class="color-changer">
+          <button id="color-btn">Change Color</button>
+          <div id="color-display"></div>
+        </div>
+
+        <div class="gallery">
+          <h3>Image Gallery</h3>
+          <div class="gallery-container">
+            <img
+              src="https://picsum.photos/id/237/400/300"
+              alt="Gallery image"
+              class="active"
+            />
+            <img
+              src="https://picsum.photos/id/238/400/300"
+              alt="Gallery image"
+            />
+            <img
+              src="https://picsum.photos/id/239/400/300"
+              alt="Gallery image"
+            />
+          </div>
+          <div class="gallery-controls">
+            <button id="prev-btn">Previous</button>
+            <button id="next-btn">Next</button>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <h3>FAQ Accordion</h3>
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              What is JavaScript?<span>+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                JavaScript is a programming language that enables interactive
+                web pages.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              What are events?<span>+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Events are actions that happen in the browser that JavaScript
+                can respond to.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              Why learn event handling?<span>+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Event handling makes your web pages interactive and dynamic.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Validation Section -->
+      <section class="card">
+        <h2>Form Validation</h2>
+        <form id="user-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required />
+            <div class="error-message" id="name-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+            <div class="error-message" id="email-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required minlength="8" />
+            <div class="error-message" id="password-error"></div>
+            <div class="password-rules">
+              <p>Password must contain:</p>
+              <ul>
+                <li id="length-rule">At least 8 characters</li>
+                <li id="number-rule">At least 1 number</li>
+                <li id="special-rule">At least 1 special character</li>
+              </ul>
+            </div>
+          </div>
+
+          <button type="submit">Submit</button>
+          <div id="form-message"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created with JavaScript magic ✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
